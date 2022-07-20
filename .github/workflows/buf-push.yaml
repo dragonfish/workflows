@@ -1,0 +1,29 @@
+name: Buf push
+
+on:
+  workflow_call:
+    inputs:
+      buf-mod-dir:
+        required: true
+        type: string
+        description: Directory where the buf module is
+    secrets:
+      buf-token:
+        required: true
+        description: Buf token
+
+jobs:
+  buf-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - uses: bufbuild/buf-setup-action@v1.6.0
+        with:
+          github_token: ${{ github.token }}
+
+      - uses: bufbuild/buf-push-action@v1
+        with:
+          buf_token: ${{ secrets.buf-token }}
+          input: ${{ inputs.buf-mod-dir }}
