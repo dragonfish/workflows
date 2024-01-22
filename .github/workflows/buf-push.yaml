@@ -7,6 +7,10 @@ on:
         required: true
         type: string
         description: Directory where the buf module is located
+    secrets:
+      BUF_TOKEN:
+        required: true
+        description: Buf token
 
 jobs:
   buf-push:
