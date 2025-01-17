@@ -20,7 +20,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
-      - uses: bufbuild/buf-setup-action@a8b4a18369a5feb07d4bf9cb2b24f81d105d7bab # v1.42.0
+      - uses: bufbuild/buf-setup-action@480b44ac64eb7784931d42dcddaf762c626186a6 # v1.49.0
         with:
           github_token: ${{ github.token }}
 
