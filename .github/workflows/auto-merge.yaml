@@ -24,7 +24,7 @@ jobs:
       #     sync-labels: true
       #     configuration-path: ${{ inputs.config-path }}
 
-      - uses: thollander/actions-comment-pull-request@fabd468d3a1a0b97feee5f6b9e499eab0dd903f6 # v2
+      - uses: thollander/actions-comment-pull-request@24bffb9b452ba05a4f3f77933840a6a841d1b32b # v2
         with:
           message: |
             /trunk merge
